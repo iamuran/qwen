@@ -57,7 +57,7 @@
                 </div>
                 <div class="service-info">
                     <div class="service-name">Цифровые документы</div>
-                    <div class="service-desc">Удостоверение, Водительские права, Справки</div>
+                    <div class="service-desc">Удостоверение, Паспорт РК, Диплом, Справки</div>
                 </div>
                 <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             </div>
@@ -140,7 +140,7 @@
             </div>
             <div class="nav-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="#999"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
-                <span>Код QR</span>
+                <span>kaspi QR</span>
             </div>
             <div class="nav-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="#999"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
@@ -163,15 +163,57 @@
         </div>
         <div class="content">
             <h2 class="section-title">Мои документы</h2>
+            
+            <!-- Document Type Tabs -->
+            <div class="doc-tabs">
+                <button class="doc-tab active" data-doc="identity" onclick="switchDoc('identity')">
+                    <span class="doc-tab-icon">🪪</span>
+                    <span>Удостоверение</span>
+                </button>
+                <button class="doc-tab" data-doc="passport" onclick="switchDoc('passport')">
+                    <span class="doc-tab-icon">📘</span>
+                    <span>Паспорт РК</span>
+                </button>
+                <button class="doc-tab" data-doc="diploma" onclick="switchDoc('diploma')">
+                    <span class="doc-tab-icon">🎓</span>
+                    <span>Диплом</span>
+                </button>
+            </div>
+            
+            <!-- Document Cards -->
             <div class="doc-card" onclick="navigateTo('screen-identity-doc')">
                 <div class="doc-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h2M15 12h2M7 16h10"/></svg>
                 </div>
                 <div class="doc-info">
-                    <div class="doc-name">Удостоверение личности</div>
+                    <div class="doc-name" id="doc-name-identity">Удостоверение личности</div>
+                    <div class="doc-status" id="doc-status-identity">Не загружено</div>
                 </div>
                 <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             </div>
+            
+            <div class="doc-card" onclick="navigateTo('screen-identity-doc')">
+                <div class="doc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h2M15 12h2M7 16h10"/></svg>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-name">Паспорт гражданина РК</div>
+                    <div class="doc-status" id="doc-status-passport">Не загружено</div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            
+            <div class="doc-card" onclick="navigateTo('screen-identity-doc')">
+                <div class="doc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-name">Диплом</div>
+                    <div class="doc-status" id="doc-status-diploma">Не загружено</div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            
             <div class="doc-card">
                 <div class="doc-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
@@ -182,6 +224,7 @@
                 </div>
                 <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             </div>
+            
             <button class="refresh-btn" onclick="refreshDocs()">
                 Обновить список документов
             </button>
@@ -194,7 +237,7 @@
             <button class="back-btn" onclick="navigateTo('screen-digital-docs')">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             </button>
-            <div class="header-title">Удостоверение личности</div>
+            <div class="header-title" id="current-doc-title">Удостоверение личности</div>
         </div>
         <div class="content">
             <!-- Tabs -->
@@ -224,6 +267,13 @@
                         <button class="upload-btn" onclick="handleUpload('photo')">Загрузить фото</button>
                     </div>
                 </div>
+                
+                <!-- Preview Area -->
+                <div id="preview-area" class="preview-area" style="display:none;">
+                    <img id="doc-preview-img" src="" alt="Document preview" class="preview-img">
+                    <button class="zoom-btn" onclick="openFullscreen()">🔍 Увеличить</button>
+                </div>
+                
                 <button class="present-btn" onclick="presentDocument()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
                     Предъявить документ
@@ -243,14 +293,14 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                         </button>
                     </div>
-                    <div class="detail-item">
-                        <div class="detail-label">ИНН</div>
+                    <div class="detail-item" id="detail-iin-row">
+                        <div class="detail-label">ИИН</div>
                         <div class="detail-value" id="detail-inn">Официальный Telegram – @</div>
                         <button class="copy-btn" onclick="copyDetail('detail-inn')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                         </button>
                     </div>
-                    <div class="detail-item">
+                    <div class="detail-item" id="detail-birth-row">
                         <div class="detail-label">Дата рождения</div>
                         <div class="detail-value" id="detail-birth">by</div>
                         <button class="copy-btn" onclick="copyDetail('detail-birth')">
@@ -279,10 +329,53 @@
                         </button>
                     </div>
                 </div>
-                <button class="send-details-btn-full" onclick="sendDetails()">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
-                    Отправить реквизиты
+                <button class="send-details-btn-full" onclick="openEditModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    Редактировать реквизиты
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Preview Modal -->
+    <div id="fullscreen-modal" class="fullscreen-modal" onclick="closeFullscreen()">
+        <img id="fullscreen-img" src="" alt="Fullscreen preview">
+        <button class="close-fullscreen" onclick="closeFullscreen()">✕</button>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="edit-modal">
+        <div class="edit-modal-content">
+            <div class="edit-modal-header">
+                <button class="edit-cancel" onclick="closeEditModal()">Отмена</button>
+                <div class="edit-modal-title">Реквизиты</div>
+                <button class="edit-save" onclick="saveDetails()">Сохранить</button>
+            </div>
+            <div class="edit-modal-body">
+                <div class="edit-field">
+                    <label>ФИО</label>
+                    <input type="text" id="edit-fio">
+                </div>
+                <div class="edit-field" id="edit-iin-field">
+                    <label>ИИН</label>
+                    <input type="text" id="edit-inn">
+                </div>
+                <div class="edit-field" id="edit-birth-field">
+                    <label>Дата рождения</label>
+                    <input type="text" id="edit-birth" placeholder="ДД.ММ.ГГГГ">
+                </div>
+                <div class="edit-field">
+                    <label>Номер документа</label>
+                    <input type="text" id="edit-docnum">
+                </div>
+                <div class="edit-field">
+                    <label>Дата выдачи</label>
+                    <input type="text" id="edit-issue" placeholder="ДД.ММ.ГГГГ">
+                </div>
+                <div class="edit-field">
+                    <label>Срок действия</label>
+                    <input type="text" id="edit-expiry" placeholder="ДД.ММ.ГГГГ или Бессрочно">
+                </div>
             </div>
         </div>
     </div>

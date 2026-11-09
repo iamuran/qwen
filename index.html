@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Госуслуги">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Госуслуги — цифровые документы и сервисы">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <title>Госуслуги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="screen active">
+        <div class="splash-content">
+            <div class="splash-logos">
+                <div class="logo-egov">
+                    <span class="egov-text">e<span class="egov-dot">.</span>gov</span>
+                </div>
+                <span class="plus-sign">+</span>
+                <div class="logo-people">
+                    <svg viewBox="0 0 100 100" width="100" height="100">
+                        <circle cx="50" cy="50" r="48" fill="#E31E24"/>
+                        <path d="M35 75 C35 55, 40 45, 45 40 C48 37, 52 37, 55 40 C58 43, 60 50, 60 55 L60 75 Z" fill="white"/>
+                        <circle cx="47" cy="32" r="8" fill="white"/>
+                        <path d="M55 75 C55 60, 58 52, 62 48 C64 46, 67 46, 69 48 C71 50, 73 55, 73 60 L73 75 Z" fill="white"/>
+                        <circle cx="64" cy="38" r="7" fill="white"/>
+                        <path d="M68 42 L75 30 L78 33 L72 45 Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            <p class="splash-subtitle">При поддержке Министерства<br>цифрового развития</p>
+        </div>
+    </div>
+
+    <!-- Main Services Screen -->
+    <div id="screen-services" class="screen">
+        <div class="header">
+            <div class="header-title">Госуслуги</div>
+        </div>
+        <div class="search-bar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" placeholder="Поиск по Госуслугам" id="search-input">
+        </div>
+        <div class="services-list" id="services-list">
+            <div class="service-item" data-screen="screen-digital-docs">
+                <div class="service-icon" style="background:#E8F5E9;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#4CAF50"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v2H8zm0 4h5v2H8z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Цифровые документы</div>
+                    <div class="service-desc">Удостоверение, Водительские права, Справки</div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#E3F2FD;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#2196F3"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Пособия и выплаты</div>
+                    <div class="service-desc">На ребенка, для многодетных, при потере работы</div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#FFF3E0;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF9800"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Пере оформление автомобиля</div>
+                    <div class="service-desc"></div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#FCE4EC;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#E91E63"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Замена водительских прав</div>
+                    <div class="service-desc"></div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#E8EAF6;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#3F51B5"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Прописка и снятие с прописки по месту жительства</div>
+                    <div class="service-desc"></div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#FFF8E1;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Оформление свидетельства о рождении ребенка</div>
+                    <div class="service-desc"></div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#E0F2F1;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#009688"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Зарегистрировать ИП</div>
+                    <div class="service-desc"></div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="service-item">
+                <div class="service-icon" style="background:#F3E5F5;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#9C27B0"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">Социальный Счет</div>
+                    <div class="service-desc"></div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </div>
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item active" data-screen="screen-services">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#007AFF"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <span>Главная</span>
+            </div>
+            <div class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#999"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                <span>Код QR</span>
+            </div>
+            <div class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#999"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                <span>Сообщения</span>
+            </div>
+            <div class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#999"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                <span>Сервисы</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Documents Screen -->
+    <div id="screen-digital-docs" class="screen">
+        <div class="header">
+            <button class="back-btn" onclick="navigateTo('screen-services')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="header-title">Цифровые документы</div>
+        </div>
+        <div class="content">
+            <h2 class="section-title">Мои документы</h2>
+            <div class="doc-card" onclick="navigateTo('screen-identity-doc')">
+                <div class="doc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h2M15 12h2M7 16h10"/></svg>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-name">Удостоверение личности</div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-name">Справки</div>
+                    <div class="doc-desc">Социальные, по недвижимости и медицинские</div>
+                </div>
+                <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <button class="refresh-btn" onclick="refreshDocs()">
+                Обновить список документов
+            </button>
+        </div>
+    </div>
+
+    <!-- Identity Document Screen -->
+    <div id="screen-identity-doc" class="screen">
+        <div class="header">
+            <button class="back-btn" onclick="navigateTo('screen-digital-docs')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="header-title">Удостоверение личности</div>
+        </div>
+        <div class="content">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" data-tab="tab-document" onclick="switchTab('tab-document')">Документ</div>
+                <div class="tab" data-tab="tab-details" onclick="switchTab('tab-details')">Реквизиты</div>
+            </div>
+
+            <!-- Tab: Document -->
+            <div id="tab-document" class="tab-content active">
+                <div class="doc-upload-area">
+                    <div class="upload-modal" id="upload-modal">
+                        <div class="upload-options">
+                            <div class="upload-option" onclick="handleUpload('gallery')">
+                                <span>Медиатека</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <div class="upload-option" onclick="handleUpload('camera')">
+                                <span>Сделать снимок</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            </div>
+                            <div class="upload-option" onclick="handleUpload('file')">
+                                <span>Выбрать файл</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                        </div>
+                        <button class="upload-btn" onclick="handleUpload('photo')">Загрузить фото</button>
+                    </div>
+                </div>
+                <button class="present-btn" onclick="presentDocument()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+                    Предъявить документ
+                </button>
+                <button class="send-details-btn" onclick="switchTab('tab-details')">
+                    Отправить реквизиты
+                </button>
+            </div>
+
+            <!-- Tab: Details (Реквизиты) -->
+            <div id="tab-details" class="tab-content">
+                <div class="details-list">
+                    <div class="detail-item">
+                        <div class="detail-label">ФИО</div>
+                        <div class="detail-value" id="detail-fio">Официальный Telegram – @</div>
+                        <button class="copy-btn" onclick="copyDetail('detail-fio')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">ИНН</div>
+                        <div class="detail-value" id="detail-inn">Официальный Telegram – @</div>
+                        <button class="copy-btn" onclick="copyDetail('detail-inn')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Дата рождения</div>
+                        <div class="detail-value" id="detail-birth">by</div>
+                        <button class="copy-btn" onclick="copyDetail('detail-birth')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Номер документа</div>
+                        <div class="detail-value" id="detail-docnum"></div>
+                        <button class="copy-btn" onclick="copyDetail('detail-docnum')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Дата выдачи</div>
+                        <div class="detail-value" id="detail-issue"></div>
+                        <button class="copy-btn" onclick="copyDetail('detail-issue')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Срок действия</div>
+                        <div class="detail-value" id="detail-expiry"></div>
+                        <button class="copy-btn" onclick="copyDetail('detail-expiry')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <button class="send-details-btn-full" onclick="sendDetails()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                    Отправить реквизиты
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden file input -->
+    <input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFileSelect(event)">
+
+    <script src="app.js"></script>
+</body>
+</html>

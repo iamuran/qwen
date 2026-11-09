@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gosuslugi-v1';
+const CACHE_NAME = 'gosuslugi-v2';
 const urlsToCache = [
     './',
     './index.html',
